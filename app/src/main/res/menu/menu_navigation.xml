@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="@string/saliendo_ahora"
+        android:icon="@drawable/saliendo"/>
+    <item
+        android:title="@string/reservar"
+        android:icon="@drawable/reservar"/>
+
+    <item
+        android:title="@string/cartera"
+        android:icon="@drawable/cartera"/>
+    <item
+        android:title="@string/extender_tiempo"
+        android:icon="@drawable/extender"/>
+
+
+</menu>

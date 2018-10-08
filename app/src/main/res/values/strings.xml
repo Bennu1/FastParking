@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FastParking</string>
+    <string name="title_activity_cartera">Cartera</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="saliendo_ahora">Saliendo Ahora</string>
+    <string name="Reservar" />
+    <string name="reservar">Reservar</string>
+    <string name="cartera">Cartera</string>
+    <string name="extender_tiempo">Extender tiempo</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
