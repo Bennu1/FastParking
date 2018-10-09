@@ -10,6 +10,7 @@ public class LoginActivity extends AppCompatActivity
 {
 
     Button btnLogin;
+    Button btnReg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -26,6 +27,18 @@ public class LoginActivity extends AppCompatActivity
             {
                 Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        btnReg = (Button) findViewById(R.id.btn_registro);
+
+        btnReg.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent op = new Intent(getApplicationContext(), registro.class);
+                startActivity(op);
             }
         });
     }
