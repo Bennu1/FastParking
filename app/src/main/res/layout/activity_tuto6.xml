@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/tuto6" />
+        app:srcCompat="@drawable/tuto6"/>
 
     <Button
         android:id="@+id/tuto6"
