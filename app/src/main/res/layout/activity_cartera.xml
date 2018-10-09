@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="20dp"
         android:text="Saldo de cuenta"
         android:textColor="#1B3764"
         android:textSize="20sp"
@@ -28,13 +28,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="17dp"
         android:text="12.000$"
         android:textColor="#516688"
         android:textSize="18sp"
-        app:fontFamily="@font/roboto_r"
+        app:fontFamily="@font/roboto"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/button4"
@@ -42,12 +42,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="21dp"
         android:background="@android:color/transparent"
         android:text="Ingresar saldo en la cuenta"
         android:textColor="#3A5279"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/button5"
@@ -55,7 +55,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="27dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="#00A8E0"
@@ -64,7 +64,7 @@
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/barraNav"

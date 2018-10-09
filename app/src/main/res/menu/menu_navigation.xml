@@ -2,18 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:title="@string/saliendo_ahora"
-        android:icon="@drawable/saliendo"/>
+        android:id="@+id/btn_saliendo"
+        android:icon="@drawable/saliendo"
+        android:title="@string/saliendo_ahora" />
     <item
-        android:title="@string/reservar"
-        android:icon="@drawable/reservar"/>
+        android:id="@+id/btn_reserva"
+        android:icon="@drawable/reservar"
+        android:title="@string/reservar" />
 
     <item
-        android:title="@string/cartera"
-        android:icon="@drawable/cartera"/>
+        android:id="@+id/btn_cartera"
+        android:icon="@drawable/cartera"
+        android:title="@string/cartera" />
     <item
-        android:title="@string/extender_tiempo"
-        android:icon="@drawable/extender"/>
+        android:id="@+id/btn_tiempo"
+        android:icon="@drawable/extender"
+        android:title="@string/extender_tiempo" />
 
 
 </menu>
