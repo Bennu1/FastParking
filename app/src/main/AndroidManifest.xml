@@ -65,8 +65,22 @@
         <activity android:name=".BuscarParquedero" />
         <activity android:name=".MenuInferior" />
         <activity android:name=".Informacion" />
-        <activity android:name=".Saliendo"
+        <activity
+            android:name=".Saliendo"
             android:theme="@style/AppTheme.PopMe" />
+        <activity
+            android:name=".Tuto1"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".Tuto2"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".Tuto3"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".Tuto4"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".Tuto5"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".Tuto6"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 
 </manifest>
