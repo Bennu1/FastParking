@@ -2,39 +2,34 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:background="#ffff"
     tools:context=".Saliendo">
 
     <TextView
         android:id="@+id/popSaida"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/roboto_medium"
         android:text="@string/cual_es_su_destino"
         android:textColor="#1B3764"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="136dp" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/digite_su_destino"
         android:inputType="textPersonName"
         android:textColor="#747474"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/popSaida" />
-
+        app:layout_constraintTop_toBottomOf="@+id/popSaida"
+        tools:layout_editor_absoluteX="137dp" />
 
 </android.support.constraint.ConstraintLayout>

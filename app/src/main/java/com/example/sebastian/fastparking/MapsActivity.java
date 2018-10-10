@@ -21,8 +21,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
 
-    private TextView salid;
-    private BottomNavigationView navView;
+    private BottomNavigationView bottomNav;
+    Button popSali;
+    Button btnCartera;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,20 +54,49 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
-        navView = (BottomNavigationView) findViewById(R.id.barraNav);
+        //menu
+        bottomNav = (BottomNavigationView) findViewById(R.id.barraNav);
 
-        navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
-            {
-                if(menuItem.getItemId() == R.id.btn_saliendo)
-                {
-                    salid.setText(R.string.saliendo_ahora);
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                if (menuItem.getItemId() == R.id.btn_saliendo){
+
+
+
+                    popSali.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(MapsActivity.this, Saliendo.class);
+                            startActivity(intent);
+                        }
+                    });
+
+                }else if (menuItem.getItemId()== R.id.btn_reserva){
+
+
+                }else if (menuItem.getItemId()== R.id.btn_cartera){
+
+
+
+                    btnCartera.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(MapsActivity.this, Cartera.class);
+                            startActivity(intent);
+                        }
+                    });
+
+                }else if (menuItem.getItemId()== R.id.btn_tiempo){
+
                 }
 
                 return false;
             }
         });
+
+
 
     }
 }

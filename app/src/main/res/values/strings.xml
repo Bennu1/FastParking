@@ -18,4 +18,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="parqueadero_juana">Parqueadero Juana</string>
+    <string name="cual_es_su_destino">¿Cual es su destino?</string>
+    <string name="digite_su_destino">Digite su destino</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

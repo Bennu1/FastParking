@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "459113757313",
+    "firebase_url": "https://fastparking-218723.firebaseio.com",
+    "project_id": "fastparking-218723",
+    "storage_bucket": "fastparking-218723.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459113757313:android:41099dfba2afb09b",
+        "android_client_info": {
+          "package_name": "com.example.sebastian.fastparking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "459113757313-pkg6vd74jgphfp8qs0t6gobi8d4ajsbg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKuNhzZmhMA9_0_dwnendqM90Oda1L8qc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

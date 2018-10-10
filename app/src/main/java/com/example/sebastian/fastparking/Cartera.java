@@ -8,14 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+
 
 public class Cartera extends AppCompatActivity
 {
 
-    private BottomNavigationView barraNav ;
-    Button btn_saliendo;
-
+    private BottomNavigationView bottomNav;
+    Button popSali;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -23,32 +22,35 @@ public class Cartera extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cartera);
 
-      barraNav = (BottomNavigationView) findViewById(R.id.barraNav);
-      barraNav.setItemIconTintList(null);
+        bottomNav = (BottomNavigationView) findViewById(R.id.barraNav);
 
-      barraNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener()
-      {
-          @Override
-          public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
-          {
+        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
-              return false;
-          }
-      });
+                if (menuItem.getItemId() == R.id.btn_saliendo){
 
-      btn_saliendo = (Button) findViewById(R.id.btn_saliendo);
+                    popSali = (Button)findViewById(R.id.salida);
 
-      /* botones */
-      btn_saliendo.setOnClickListener(new View.OnClickListener()
-      {
-          @Override
-          public void onClick(View v)
-          {
-              Intent i = new Intent(getApplicationContext(), Saliendo.class);
+                    popSali.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(Cartera.this, Saliendo.class);
+                            startActivity(intent);
+                        }
+                    });
 
-          }
-      });
+                }else if (menuItem.getItemId()== R.id.btn_reserva){
 
+                }else if (menuItem.getItemId()== R.id.btn_cartera){
+
+                }else if (menuItem.getItemId()== R.id.btn_tiempo){
+
+                }
+
+                return false;
+            }
+        });
 
     }
 
