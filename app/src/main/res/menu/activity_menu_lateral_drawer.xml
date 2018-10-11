@@ -6,7 +6,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_estacion"
-            android:icon="@drawable/parkLateral"
+            android:icon="@drawable/parklateral"
             android:title="Estacionamiento actual" />
         <item
             android:id="@+id/nav_historial"
