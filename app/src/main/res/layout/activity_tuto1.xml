@@ -17,7 +17,7 @@
     <Button
         android:id="@+id/tuto1"
         android:layout_width="408dp"
-        android:layout_height="659dp"
+        android:layout_height="682dp"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

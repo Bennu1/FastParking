@@ -26,57 +26,43 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/Usuario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="72dp"
-                android:layout_marginLeft="72dp"
-                android:layout_marginTop="15dp"
-                android:text="Usuario"
-                android:textColor="#1B3764"
-                android:textSize="16sp"
-                app:fontFamily="@font/roboto"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+    <TextView
+        android:id="@+id/Usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/usuario"
+        android:textColor="#1B3764"
+        android:textSize="16sp"
+        app:fontFamily="@font/roboto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/contrase_a"
+        android:textColor="#1B3764"
+        android:textSize="16sp"
+        app:fontFamily="@font/roboto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtEmail" />
 
             <EditText
-                android:id="@+id/UsuarioH"
+                android:id="@+id/TxtPass"
                 android:layout_width="280dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="72dp"
                 android:layout_marginLeft="72dp"
                 android:layout_marginTop="10dp"
                 android:ems="10"
-                android:hint="Ingrese un nombre de usuario"
-                android:inputType="textPersonName"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Usuario" />
-
-            <TextView
-                android:id="@+id/pass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="72dp"
-                android:layout_marginLeft="72dp"
-                android:layout_marginTop="20dp"
-                android:text="Contraseña"
-                android:textColor="#1B3764"
-                android:textSize="16sp"
-                app:fontFamily="@font/roboto"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/UsuarioH" />
-
-            <EditText
-                android:id="@+id/PassH"
-                android:layout_width="280dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="72dp"
-                android:layout_marginLeft="72dp"
-                android:layout_marginTop="10dp"
-                android:ems="10"
-                android:hint="Ingrese una contraseña"
+                android:hint="@string/ingrese_una_contrase_a"
                 android:inputType="textPassword"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -89,83 +75,70 @@
                 android:layout_marginStart="72dp"
                 android:layout_marginLeft="72dp"
                 android:layout_marginTop="20dp"
-                android:text="Repita su contraseña"
+                android:text="@string/repita_su_contrase_a"
                 android:textColor="#1B3764"
                 android:textSize="16sp"
                 app:fontFamily="@font/roboto"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PassH"
+                app:layout_constraintTop_toBottomOf="@+id/TxtPass"
                 />
 
             <EditText
-                android:id="@+id/PassHR"
+                android:id="@+id/TxtPassR"
                 android:layout_width="280dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="72dp"
                 android:layout_marginLeft="72dp"
                 android:layout_marginTop="10dp"
                 android:ems="10"
-                android:hint="Repita contraseña"
+                android:hint="@string/repita_contrase_a"
                 android:inputType="textPassword"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Pass" />
 
-            <TextView
-                android:id="@+id/correo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="72dp"
-                android:layout_marginLeft="72dp"
-                android:layout_marginTop="20dp"
-                android:text="Correo electronico"
-                android:textColor="#1B3764"
-                android:textSize="16sp"
-                app:fontFamily="@font/roboto"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PassHR" />
+    <EditText
+        android:id="@+id/TxtEmail"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/ingrese_un_correo"
+        android:inputType="textEmailAddress"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Usuario" />
 
-            <EditText
-                android:id="@+id/CorreoH"
-                android:layout_width="280dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="72dp"
-                android:layout_marginLeft="72dp"
-                android:layout_marginTop="10dp"
-                android:ems="10"
-                android:hint="Ingrese un correo"
-                android:inputType="textEmailAddress"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/correo" />
+    <Button
+        android:id="@+id/btn_reg"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#00A8E0"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/registrarse"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtPassR" />
 
-            <Button
-                android:id="@+id/btn_reg"
-                android:layout_width="120dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:background="#00A8E0"
-                android:fontFamily="@font/roboto_medium"
-                android:text="Registrarse"
-                android:textColor="#ffffff"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/CorreoH" />
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="34dp"
-                android:layout_height="42dp"
-                android:layout_marginStart="17dp"
-                android:layout_marginLeft="17dp"
-                android:layout_marginTop="225dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/usuario" />
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="34dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="230dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/usuario" />
 
             <ImageView
                 android:id="@+id/imageView7"
@@ -188,17 +161,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView7"
                 app:srcCompat="@drawable/pass" />
-
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="37dp"
-                android:layout_height="36dp"
-                android:layout_marginStart="17dp"
-                android:layout_marginLeft="17dp"
-                android:layout_marginTop="48dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView8"
-                app:srcCompat="@drawable/mail" />
 
 
 </android.support.constraint.ConstraintLayout>

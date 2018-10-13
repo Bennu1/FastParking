@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "459113757313-qgdete9v5ijas86th4v5492dk0p2raf1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sebastian.fastparking",
+            "certificate_hash": "a304465275e555c0aa4e7f85bff7f9a9befd2893"
+          }
+        },
+        {
           "client_id": "459113757313-pkg6vd74jgphfp8qs0t6gobi8d4ajsbg.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "459113757313-pkg6vd74jgphfp8qs0t6gobi8d4ajsbg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

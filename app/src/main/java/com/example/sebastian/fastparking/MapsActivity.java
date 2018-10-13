@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -27,7 +28,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
 
-    private BottomNavigationView bottomNav;
+    BottomNavigationView bottomNav;
     Button popSali;
     MenuItem btnCartera;
 
@@ -79,7 +80,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng parqueadero4 = new LatLng(4.727937906288233, -74.0659031648522);
         mMap.addMarker(new MarkerOptions().position(parqueadero4).title("Parqueadero").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
 
-        //final int REQUEST_ACCESS_FINE = 0;
+        //final int REQUEST_ACCESS_FINE = 1;
 
         // if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
         // ActivityCompat.checkSelfPermission(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION), REQUEST_ACCESS_FINE);
@@ -134,6 +135,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return false;
             }
         });
+
 
 
 
