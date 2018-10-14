@@ -63,7 +63,7 @@
 
     <!--- Boton -->
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/botonFacebook"
         android:layout_width="410dp"
         android:layout_height="75dp"
         android:layout_marginTop="18dp"
@@ -88,7 +88,7 @@
         android:textColor="#1B3764"
         app:fontFamily="@font/roboto_black_italic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button3" />
+        app:layout_constraintTop_toTopOf="@+id/botonFacebook" />
 
     <TextView
         android:id="@+id/textView1"
@@ -100,7 +100,7 @@
         android:text="Cll 138 #38-50"
         android:textColor="#6F7E96"
         app:fontFamily="@font/roboto"
-        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/botonFacebook"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <ImageView
@@ -111,7 +111,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="7dp"
         android:src="@drawable/linea"
-        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/botonFacebook"
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <!--- Final -->

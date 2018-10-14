@@ -27,7 +27,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/Usuario"
+        android:id="@+id/Usuario1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
@@ -69,7 +69,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/pass" />
 
             <TextView
-                android:id="@+id/Pass"
+                android:id="@+id/Pass1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="72dp"
@@ -95,7 +95,7 @@
                 android:inputType="textPassword"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Pass" />
+                app:layout_constraintTop_toBottomOf="@+id/Pass1" />
 
     <EditText
         android:id="@+id/TxtEmail"
@@ -109,7 +109,7 @@
         android:inputType="textEmailAddress"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Usuario" />
+        app:layout_constraintTop_toBottomOf="@+id/Usuario1" />
 
     <Button
         android:id="@+id/btn_reg"

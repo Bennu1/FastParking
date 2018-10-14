@@ -14,6 +14,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 public class registro extends AppCompatActivity implements View.OnClickListener {
 
@@ -70,7 +71,7 @@ public class registro extends AppCompatActivity implements View.OnClickListener 
         progressDialog.setMessage("Realizando registro en linea...");
         progressDialog.show();
 
-        //creating a new user
+        //Nuevo usuario
         firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -79,9 +80,12 @@ public class registro extends AppCompatActivity implements View.OnClickListener 
                         if(task.isSuccessful()){
 
                             Toast.makeText(registro.this,"Se ha registrado el usuario con el email: "+ TextEmail.getText(),Toast.LENGTH_LONG).show();
-                        }else{
-
-                            Toast.makeText(registro.this,"No se pudo registrar el usuario ",Toast.LENGTH_LONG).show();
+                        }else {
+                            if (task.getException() instanceof FirebaseAuthUserCollisionException) {
+                                Toast.makeText(registro.this, "El usuario ya existe ", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(registro.this, "No se pudo registrar el usuario ", Toast.LENGTH_LONG).show();
+                            }
                         }
                         progressDialog.dismiss();
                     }

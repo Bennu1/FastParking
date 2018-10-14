@@ -150,7 +150,9 @@
         android:text="Ingresar con facebook"
         android:textColor="@android:color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintTop_toBottomOf="@+id/button7"
+        android:drawableStart="@drawable/face"
+        android:paddingStart="20dp" />
 
     <EditText
         android:id="@+id/TxtPass1"
