@@ -44,9 +44,6 @@
             android:name=".registro"
             android:label="registro"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".Cartera"
-            android:label="@string/title_activity_cartera" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -57,7 +54,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyCGu30K2K_79FU1P55_bZRk2-2ELhj2-4k" />
 
         <activity
             android:name=".MapsActivity"
@@ -97,7 +94,6 @@
             android:name=".Lateral"
             android:label="@string/title_activity_lateral"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Cartera1"></activity>
     </application>
 
 </manifest>

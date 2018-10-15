@@ -24,7 +24,7 @@ public class Tuto6 extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MenuInferior.class);
                 startActivity(intent);
             }
         });
