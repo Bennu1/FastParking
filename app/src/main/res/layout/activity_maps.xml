@@ -16,7 +16,7 @@
 
             tools:context=".MapsActivity" />
 
-        <include layout="@layout/activity_menu_inferior" />
+
 
 
 </android.support.constraint.ConstraintLayout>

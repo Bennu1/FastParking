@@ -1,5 +1,6 @@
 package com.example.sebastian.fastparking;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -14,7 +15,12 @@ import android.widget.Toast;
 import com.example.sebastian.fastparking.R;
 import com.facebook.CustomTabMainActivity;
 
-public class MenuInferior extends AppCompatActivity {
+public class MenuInferior extends AppCompatActivity
+        implements Cartera.OnFragmentInteractionListener,
+        Reservar.OnFragmentInteractionListener, Extender.OnFragmentInteractionListener{
+
+
+
 
     private BottomNavigationView mMainNav;
     private FrameLayout mMainFrame;
@@ -76,7 +82,7 @@ public class MenuInferior extends AppCompatActivity {
                         return true;
                     case R.id.btn_cartera:
                         mMainNav.setItemBackgroundResource(R.color.colorPrimaryDark);
-                        setFragment(carteraFragment);
+                        setFragment (carteraFragment);
 
                         return true;
                     case R.id.btn_tiempo:
@@ -103,4 +109,9 @@ public class MenuInferior extends AppCompatActivity {
 
     }
 
+
+    @Override
+    public void onFragmentInteraction(Uri uri){
+        //you can leave it empty
+    }
 }
