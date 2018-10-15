@@ -13,8 +13,8 @@
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="424dp"
             android:layout_height="569dp"
-
             tools:context=".MapsActivity" />
+
 
 
 

@@ -22,5 +22,4 @@
 
     <include layout="@layout/content_lateral" />
 
-
 </android.support.design.widget.CoordinatorLayout>
