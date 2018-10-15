@@ -11,11 +11,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.facebook.AccessToken;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
+import com.facebook.CallbackManager;
+import android.widget.ProgressBar;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -24,6 +35,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private EditText TextEmail;
     private EditText TextPass;
     private ProgressDialog progressDialog;
+
+
 
     //Objeto fire base
     private FirebaseAuth firebaseAuth;
@@ -61,7 +74,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
         btnLogin.setOnClickListener(this);
+
+
+
     }
+
+    private void goMainScreen() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
 
     private void loguearUsuario() {
 
@@ -116,6 +139,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         loguearUsuario();
 
         }
+
     }
 
 

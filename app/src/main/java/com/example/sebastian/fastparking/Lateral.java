@@ -1,10 +1,8 @@
 package com.example.sebastian.fastparking;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,25 +13,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MenuLateral extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, EstacionaFragment.OnFragmentInteractionListener,
-        HistorialFragment.OnFragmentInteractionListener ,AjustesFragment.OnFragmentInteractionListener {
+public class Lateral extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_lateral);
+        setContentView(R.layout.activity_lateral);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -41,10 +30,9 @@ public class MenuLateral extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setItemIconTintList(null);
     }
 
     @Override
@@ -60,7 +48,7 @@ public class MenuLateral extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_lateral, menu);
+        getMenuInflater().inflate(R.menu.lateral, menu);
         return true;
     }
 
@@ -85,43 +73,18 @@ public class MenuLateral extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        Fragment miFragment=null;
-        boolean fragmentSeleccionado=false;
+        if (id == R.id.nav_estacion) {
+            // Handle the camera action
+        } else if (id == R.id.nav_historial) {
 
+        } else if (id == R.id.nav_ajustes) {
 
-        if (id == R.id.nav_estacion)
-        {
-            miFragment=new EstacionaFragment();
-            fragmentSeleccionado=true;
-
-        }
-        else if (id == R.id.nav_historial)
-        {
-            miFragment=new HistorialFragment();
-            fragmentSeleccionado=true;
-        }
-        else if (id == R.id.nav_ajustes)
-        {
-            miFragment=new AjustesFragment();
-            fragmentSeleccionado=true;
-        }
-        else if (id == R.id.nav_ayuda)
-        {
+        } else if (id == R.id.nav_ayuda) {
 
         }
-
-        if (fragmentSeleccionado==true){
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_lateral,miFragment).commit();
-        }
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
     }
 }

@@ -22,6 +22,7 @@
     <string name="digite_su_destino">Digite su destino</string>
 
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="facebook_app_id">161780518097514</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ingrese_un_correo">Ingrese un correo</string>
     <string name="ingrese_una_contrase_a">Ingrese una contraseña</string>
@@ -35,4 +36,9 @@
     <string name="registrarse">registrarse</string>
     <string name="recuperar_contra">Recuperar contraseña</string>
     <string name="usuario">Usuario</string>
+    <!-- face -->
+    <string name="firebase_error_login">Error al iniciar sesión en Firebase</string>
+    <string name="cancel_login">Se canceló la operación</string>
+    <string name="error_login">Ocurrió un error al ingresar</string>
+    <string name="title_activity_lateral">Lateral</string>
 </resources>

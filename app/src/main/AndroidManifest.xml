@@ -8,21 +8,24 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality. 
     -->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
 
     <application
+        android:name="android.support.multidex.MultiDexApplication"
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:name="android.support.multidex.MultiDexApplication"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning"
-        >
+        tools:ignore="GoogleAppIndexingWarning">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
         <activity
             android:name=".LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -63,10 +66,6 @@
         <activity
             android:name=".ExtenderT"
             android:label="@string/extender_tiempo" />
-        <activity
-            android:name=".MenuLateral"
-            android:label="@string/title_activity_menu_lateral"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".BuscarParquedero" />
         <activity android:name=".MenuInferior" />
         <activity android:name=".Informacion" />
@@ -76,16 +75,29 @@
         <activity
             android:name=".Tuto1"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".Tuto2"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".Tuto3"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".Tuto4"
+        <activity
+            android:name=".Tuto2"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".Tuto5"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".Tuto6"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".Tuto3"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Tuto4"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Tuto5"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Tuto6"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Index"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Lateral"
+            android:label="@string/title_activity_lateral"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Cartera1"></activity>
     </application>
 
 </manifest>

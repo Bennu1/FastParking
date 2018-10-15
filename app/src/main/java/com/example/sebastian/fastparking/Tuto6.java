@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.gms.maps.MapView;
+
 public class Tuto6 extends AppCompatActivity {
 
     Button btntut6;

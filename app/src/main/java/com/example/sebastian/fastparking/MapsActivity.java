@@ -1,13 +1,21 @@
 package com.example.sebastian.fastparking;
 
+import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.location.LocationProvider;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -40,6 +48,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+        assert mapFragment != null;
         mapFragment.getMapAsync(this);
     }
 
@@ -87,55 +96,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION,}, 1000);
+        } else {
+            locationStart();
+        }
+    }
+    private void locationStart() {
+        LocationManager mlocManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
+        final boolean gpsEnabled = mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        if (!gpsEnabled) {
+            Intent settingsIntent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+            startActivity(settingsIntent);
+        }
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION,}, 1000);
             return;
         }
+
+        //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(bogota, 200));
         mMap.setMyLocationEnabled(true);
-
-        //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(bogota, 50));
-
-        //menu
-        bottomNav = (BottomNavigationView) findViewById(R.id.barraNav);
-
-        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-
-                if (menuItem.getItemId() == R.id.btn_saliendo){
-
-                    popSali.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent(MapsActivity.this, Saliendo.class);
-                            startActivity(intent);
-                        }
-                    });
-
-                }else if (menuItem.getItemId()== R.id.btn_reserva){
-
-
-                }else if (menuItem.getItemId()== R.id.btn_cartera){
-
-                    btnCartera = findViewById(R.id.btn_cartera);
-
-                    btnCartera = menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-
-                        @Override
-                        public boolean onMenuItemClick(MenuItem item) {
-                            Intent intent = new Intent(MapsActivity.this, Saliendo.class);
-                            startActivity(intent);
-                            return true;
-                        }
-                    });
-
-                }else if (menuItem.getItemId()== R.id.btn_tiempo){
-
-                }
-
-                return false;
-            }
-        });
-
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
 
 
 
