@@ -103,7 +103,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
         final ProgressDialog progressDialog = new ProgressDialog(this);
 
-        progressDialog.setMessage("Realizando consulta...");
+        progressDialog.setMessage("Ingresando...");
         progressDialog.show();
 
         //Logear usuario

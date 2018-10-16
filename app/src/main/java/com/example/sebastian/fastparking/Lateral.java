@@ -1,9 +1,11 @@
 package com.example.sebastian.fastparking;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -11,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.sebastian.fastparking.R;
 
@@ -23,6 +26,8 @@ public class Lateral extends AppCompatActivity
         setContentView(R.layout.activity_lateral);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
 
 
 
@@ -84,12 +89,12 @@ public class Lateral extends AppCompatActivity
             fragmentSeleccionado=true;
 
         } else if (id == R.id.nav_slideshow) {
+            miFragment=new AjustesFragment();
+            fragmentSeleccionado=true;
 
         } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
 
         }
 

@@ -40,6 +40,7 @@ public class MenuInferior extends AppCompatActivity
 
 
 
+
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -79,14 +80,22 @@ public class MenuInferior extends AppCompatActivity
         extenderFreame= new Extender();
 
 
+
         mMainNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+
+
+
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+
 
                 switch (item.getItemId()) {
                     case R.id.btn_saliendo:
                         Intent inten = new Intent(MenuInferior.this,MapsActivity.class);
                         startActivity(inten);
+
 
 
                         return true;
@@ -104,6 +113,12 @@ public class MenuInferior extends AppCompatActivity
                     case R.id.btn_tiempo:
 
                         setFragment(extenderFreame);
+
+                        return true;
+
+                    case R.id.btn_menu:
+                        Intent inten2 = new Intent(MenuInferior.this,Lateral.class);
+                        startActivity(inten2);
 
                         return true;
 

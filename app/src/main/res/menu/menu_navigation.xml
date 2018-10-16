@@ -18,6 +18,10 @@
         android:id="@+id/btn_tiempo"
         android:icon="@drawable/extender"
         android:title="@string/extender_tiempo" />
+    <item
+        android:id="@+id/btn_menu"
+        android:icon="@drawable/extender"
+        android:title="@string/menu" />
 
 
 </menu>
