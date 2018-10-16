@@ -41,6 +41,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     BottomNavigationView bottomNav;
     Button popSali;
     MenuItem btnCartera;
+    private Marker InfoWindow1, InfoWindow2,InfoWindow3,InfoWindow4,InfoWindow5;
 
 
     @Override
@@ -76,23 +77,46 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         // Add a marker in Sydney and move the camera
-        LatLng parqueadero1 = new LatLng(4.727013787658549, -74.06031915407259);
-        mMap.addMarker(new MarkerOptions().position(parqueadero1).title("Parqueadero").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
+        LatLng parqueadero1 = new LatLng(4.6083912117733945, -74.06835822170791);
+        InfoWindow1 = googleMap.addMarker(new MarkerOptions()
+                .position(parqueadero1)
+                .title("Parquedero dinoko")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+        );
 
 
         // Add a marker in Sydney and move the camera
-        LatLng parqueadero2 = new LatLng(4.727146911806514, -74.05612194179456);
-        mMap.addMarker(new MarkerOptions().position(parqueadero2).title("Parqueadero").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
+        LatLng parqueadero2 = new LatLng(4.607304253784321, -74.06701526294225);
+        InfoWindow2 = googleMap.addMarker(new MarkerOptions()
+                .position(parqueadero2)
+                .title("Parquedero Lucho")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+        );
 
         // Add a marker in Sydney and move the camera
 
-        LatLng parqueadero3 = new LatLng(4.724388126937143, -74.05650375394548);
-        mMap.addMarker(new MarkerOptions().position(parqueadero3).title("Parqueadero").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
+        LatLng parqueadero3 = new LatLng(4.6065974625055475, -74.06969580864687);
+        InfoWindow3 = googleMap.addMarker(new MarkerOptions()
+                        .position(parqueadero3)
+                        .title("Parquedero xia")
+                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+        );
 
         // Add a marker in Sydney and move the camera
 
-        LatLng parqueadero4 = new LatLng(4.727937906288233, -74.0659031648522);
-        mMap.addMarker(new MarkerOptions().position(parqueadero4).title("Parqueadero").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
+        LatLng parqueadero4 = new LatLng(4.605612237265234, -74.06878527622428);
+        InfoWindow4 = googleMap.addMarker(new MarkerOptions()
+        .position(parqueadero4)
+        .title("Parquedero Juana")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+        );
+
+        LatLng parqueadero5 = new LatLng(4.608381612314815, -74.06865350222813);
+        InfoWindow5 = googleMap.addMarker(new MarkerOptions()
+                .position(parqueadero5)
+                .title("Parquedero nix")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+        );
 
         //final int REQUEST_ACCESS_FINE = 1;
 
@@ -150,7 +174,39 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onInfoWindowClick(Marker marker) {
+        if (marker.equals(InfoWindow1)){
 
+            ParkingFragment.newInstance(marker.getTitle(),
+                    getString(R.string.Parkinginfo1))
+                    .show(getSupportFragmentManager(), null);
+
+        }if (marker.equals(InfoWindow2)){
+
+            ParkingFragment2.newInstance(marker.getTitle(),
+                    getString(R.string.Parkinginfo2))
+                    .show(getSupportFragmentManager(), null);
+
+        }if (marker.equals(InfoWindow3)){
+
+            ParkingFragment3.newInstance(marker.getTitle(),
+                    getString(R.string.Parkinginfo3))
+                    .show(getSupportFragmentManager(), null);
+
+        }if (marker.equals(InfoWindow4)){
+
+            ParkingFragment4.newInstance(marker.getTitle(),
+                    getString(R.string.Parkinginfo4))
+                    .show(getSupportFragmentManager(), null);
+
+        }
+        if (marker.equals(InfoWindow5)){
+
+            ParkingFragment4.newInstance(marker.getTitle(),
+                    getString(R.string.Parkinginfo5))
+                    .show(getSupportFragmentManager(), null);
+
+        }
 
     }
+
 }

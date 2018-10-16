@@ -42,4 +42,10 @@
     <string name="error_login">Ocurrió un error al ingresar</string>
     <string name="title_activity_lateral">Lateral</string>
     <string name="menu">Menu</string>
+
+    <string name="Parkinginfo1">Disponibilidad 5 \n\nPrecio por minuto $30 \n\nHorario 24 horas</string>
+    <string name="Parkinginfo2">Disponibilidad 13 \n\nPrecio por minuto $40 \n\nHorario 7 Am a 9 Pm </string>
+    <string name="Parkinginfo3">Disponibilidad 3 \n\nPrecio por minuto $20 \n\nHorario 24 horas</string>
+    <string name="Parkinginfo4">Disponibilidad 7 \n\nPrecio por minuto $25 \n\nHorario 5 Am a 11 Pm</string>
+    <string name="Parkinginfo5">Disponibilidad 7 \n\nPrecio por minuto $25 \n\nHorario 24 horas</string>
 </resources>
