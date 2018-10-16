@@ -8,16 +8,7 @@
 
 
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/main_nav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#ffffff"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        app:menu="@menu/menu_navigation"
-        tools:ignore="RtlCompat"
-        />
+
 
     <FrameLayout
         android:id="@+id/main_frame"
@@ -28,19 +19,7 @@
         android:layout_alignParentStart="true"
         tools:ignore="RtlCompat">
         <include layout="@layout/activity_maps"/>
-
     </FrameLayout>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,5 +1,6 @@
 package com.example.sebastian.fastparking;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -14,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,10 +31,14 @@ public class MenuInferior extends AppCompatActivity
 
     private BottomNavigationView mMainNav;
     private FrameLayout mMainFrame;
+    private Button ubicarme;
 
     private Cartera carteraFragment;
     private Reservar reservarFragment;
     private Extender extenderFreame;
+
+
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -63,6 +69,8 @@ public class MenuInferior extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_inferior);
 
+
+
         mMainFrame = (FrameLayout) findViewById(R.id.main_frame);
         mMainNav = (BottomNavigationView) findViewById(R.id.main_nav);
 
@@ -70,12 +78,15 @@ public class MenuInferior extends AppCompatActivity
         carteraFragment = new Cartera();
         extenderFreame= new Extender();
 
+
         mMainNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 switch (item.getItemId()) {
                     case R.id.btn_saliendo:
+                        Intent inten = new Intent(MenuInferior.this,MapsActivity.class);
+                        startActivity(inten);
 
 
                         return true;
@@ -104,6 +115,7 @@ public class MenuInferior extends AppCompatActivity
         });
 
 
+
     }
 
     private void setFragment(Fragment fragment) {
@@ -111,6 +123,8 @@ public class MenuInferior extends AppCompatActivity
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.main_frame, fragment);
         fragmentTransaction.commit();
+
+
 
     }
 
@@ -121,6 +135,10 @@ public class MenuInferior extends AppCompatActivity
     }
 
     //---------------------------------------------------------------
+
+
+
+
 
 
 }

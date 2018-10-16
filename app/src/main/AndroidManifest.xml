@@ -85,7 +85,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Lateral"
-            android:label="@string/title_activity_lateral"
+            android:label="Fast Parking"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
