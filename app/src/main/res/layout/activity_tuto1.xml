@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="606dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/tuto1" />
@@ -17,7 +17,7 @@
     <Button
         android:id="@+id/tuto1"
         android:layout_width="408dp"
-        android:layout_height="682dp"
+        android:layout_height="577dp"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
