@@ -18,7 +18,8 @@ import android.view.View;
 import com.example.sebastian.fastparking.R;
 
 public class Lateral extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, HistorialFragment.OnFragmentInteractionListener  {
+        implements NavigationView.OnNavigationItemSelectedListener, HistorialFragment.OnFragmentInteractionListener,
+        AjustesFragment.OnFragmentInteractionListener  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +94,8 @@ public class Lateral extends AppCompatActivity
             fragmentSeleccionado=true;
 
         } else if (id == R.id.nav_manage) {
-
+            Intent inten = new Intent(Lateral.this,Tuto1.class);
+            startActivity(inten);
 
 
         }
