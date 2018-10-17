@@ -19,7 +19,7 @@ import com.example.sebastian.fastparking.R;
 
 public class Lateral extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, HistorialFragment.OnFragmentInteractionListener,
-        AjustesFragment.OnFragmentInteractionListener  {
+        AjustesFragment.OnFragmentInteractionListener, Reservar.OnFragmentInteractionListener  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +82,8 @@ public class Lateral extends AppCompatActivity
         boolean fragmentSeleccionado=false;
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            miFragment=new Reservar();
+            fragmentSeleccionado=true;
         } else if (id == R.id.nav_gallery) {
             miFragment=new HistorialFragment();
             fragmentSeleccionado=true;

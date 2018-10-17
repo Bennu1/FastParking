@@ -7,6 +7,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import static com.facebook.FacebookSdk.getApplicationContext;
 
 
 /**
@@ -18,6 +26,14 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class Reservar extends Fragment {
+
+    EditText direccion,fecha,llegada,salida;
+    Button guardar;
+
+    DatabaseReference databaseReference;
+
+
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -57,8 +73,38 @@ public class Reservar extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
+            databaseReference = FirebaseDatabase.getInstance().getReference();
+
+            direccion = (EditText) direccion.findViewById(R.id.Direccion);
+            fecha = (EditText) fecha.findViewById(R.id.Fecha);
+            llegada = (EditText) llegada.findViewById(R.id.Llegada);
+            salida = (EditText) salida.findViewById(R.id.Salida);
+
+            guardar = (Button) guardar.findViewById(R.id.Guardar);
+
+            guardar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String direccionE = direccion.getText().toString();
+                    String fechaE = fecha.getText().toString();
+                    String llegadaE = llegada.getText().toString();
+                    String salidaE = salida.getText().toString();
+
+                    //String id=databaseReference.push().getKey();
+
+                    Reservas user = new Reservas(direccionE, fechaE, llegadaE, salidaE);
+
+                    databaseReference.child("Reservas").child(direccionE).setValue(user);
+                    Toast.makeText(getApplicationContext(),
+                            "Reserva registrada",
+                            Toast.LENGTH_SHORT).show();
+
+                }
+            });
         }
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -105,4 +151,6 @@ public class Reservar extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
-}
+  }
+
+

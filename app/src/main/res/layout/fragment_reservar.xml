@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/Direccion"
         android:layout_width="282dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -50,7 +50,7 @@
         android:textSize="16sp"
         app:fontFamily="@font/roboto_black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText1" />
+        app:layout_constraintTop_toBottomOf="@+id/Direccion" />
 
     <TextView
         android:id="@+id/hora"
@@ -64,10 +64,10 @@
         android:textSize="16sp"
         app:fontFamily="@font/roboto_black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
+        app:layout_constraintTop_toBottomOf="@+id/Fecha" />
 
     <EditText
-        android:id="@+id/llegadaH"
+        android:id="@+id/Llegada"
         android:layout_width="282dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -83,7 +83,7 @@
         app:layout_constraintTop_toBottomOf="@+id/hora" />
 
     <TextView
-        android:id="@+id/salida"
+        android:id="@+id/horaSa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -94,10 +94,10 @@
         android:textSize="16sp"
         app:fontFamily="@font/roboto_black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/llegadaH" />
+        app:layout_constraintTop_toBottomOf="@+id/Llegada" />
 
     <EditText
-        android:id="@+id/salidah"
+        android:id="@+id/Salida"
         android:layout_width="282dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -110,11 +110,11 @@
         android:textColorHint="#7F8EA6"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/salida" />
+        app:layout_constraintTop_toBottomOf="@+id/horaSa" />
 
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/Guardar"
         android:layout_width="120dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
@@ -123,15 +123,15 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="#00A8E0"
-        android:text="Buscar"
+        android:text="Reservar"
         android:textColor="#ffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/salidah" />
+        app:layout_constraintTop_toBottomOf="@+id/Salida" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/Fecha"
         android:layout_width="282dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
